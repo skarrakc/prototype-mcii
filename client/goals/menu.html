@@ -1,0 +1,15 @@
+<template name="menu">
+    <h1 class="page-title">My current Menu</h1>
+    {{#each menuOption}}
+        {{> menuItem}}
+    {{else}}
+        <p>Please add <a href="/goal-book">goals</a> to your menu</p>
+    {{/each}}
+</template>
+
+<template name="menuItem">
+   <div class="menu-item">
+        <h3>{{goal_name}}</h3>  
+        <p>{{positive_aspects}}</p> 
+   </div>
+</template>

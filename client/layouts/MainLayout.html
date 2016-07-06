@@ -1,0 +1,11 @@
+<template name="MainLayout">
+  <header> 
+      <h1>My goal book</h1>
+      {{> loginButtons}} 
+  </header> 
+  {{> sideNav}}
+  <main class="main-layout">
+      {{> Template.dynamic template=main}}
+  </main>  
+</template>
+

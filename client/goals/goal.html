@@ -1,0 +1,23 @@
+<template name="goal">
+    <article class="recipe {{#if inMenu}}in-menu{{/if}}">
+        <h3>{{goal_name}}</h3>
+            {{#if editMode }}
+                {{> quickForm collection="Goals" id=updateGoalId type="update" doc=this autosave=true}}
+            {{else}}
+                <p>{{positive_aspects}}</p>
+                <p>
+                    {{#each challenges}}
+                        <span class="ingredient">{{obstacle}} -- {{intention}}</span>
+                    {{/each}}
+                </p>
+                {{#if inMenu}}
+                    <button class="btn-deny toggle-menu">Remove From Task List</button>
+                {{else}}
+                    <button class="btn-primary toggle-menu">Add to Task List</button>
+                {{/if}}
+            {{/if}}
+        
+        <i class= "fa fa-pencil"></i>        
+        <i class= "fa fa-trash"></i>
+    </article>  
+</template>
