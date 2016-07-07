@@ -17,6 +17,13 @@ challenge = new SimpleSchema({
              },
 });
 
+positive_aspect = new SimpleSchema({
+  name: { type: String,
+          label: "Aspect",
+          autoform: { rows:2 },
+        }
+});
+
 Schemas.Goals = new SimpleSchema({
 
   createdAt: {
@@ -37,7 +44,7 @@ Schemas.Goals = new SimpleSchema({
       type: 'hidden',
     },
   },
-  inMenu: {
+  inList: {
       type: Boolean,
       defaultValue: false,
       optional: true,
@@ -46,23 +53,9 @@ Schemas.Goals = new SimpleSchema({
       },
   },
   goal_name: { type: String },
-  positive_aspects: { type: String },
+  positive_aspects: { type: [positive_aspect] },
   challenges: { type: [challenge] },
       
 });
 
-Meteor.methods({
-    toggleMenuItem: function(id, currentstate) {
-        Goals.update(id, {
-            $set: {
-                inMenu: !currentstate
-            }
-        })
-    },
-    deleteGoal: function(id) {
-        Goals.remove(id);
-    }
-});
-
 Goals.attachSchema(Schemas.Goals);
-

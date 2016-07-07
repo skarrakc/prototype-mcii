@@ -1,0 +1,22 @@
+<template name="goal">
+    
+    <article>
+        <h3>{{goal_name}}</h3>
+        <p>
+            {{#each positive_aspects}}
+                <p>{{name}}</p>
+            {{/each}}
+        </p>
+        <p>
+            {{#each challenges}}
+                <p>{{obstacle}} -- {{intention}}</p>
+            {{/each}}
+        </p>
+            {{#if inList}}
+                <button class="toggle-menu">Remove From Task List</button>
+            {{else}}
+                <button class="toggle-menu">Add to Task List</button>
+            {{/if}}        
+    </article> 
+
+</template>

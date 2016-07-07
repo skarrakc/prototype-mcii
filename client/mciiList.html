@@ -1,11 +1,11 @@
 <template name="mciiList">
     <h1 class=page-title>My mcii list</h1>
-    <ul class=shopping-list>
+    <ul>
 	   {{#each mciiOption}}
             {{#each challenges}}
-                <li>{{obstacle}}--{{intention}}</li>
+                <li>Obstacle: {{obstacle}} VS Challenge:{{intention}}</li>
             {{/each}}
-        {{else}} <li>Please add <a href="/goal-book">goals</a> to your menu</li>
+        {{else}} <li>Please add <a href="/goal-book">goals</a> to your list</li>
 	    {{/each}}
     </ul>
 </template>
