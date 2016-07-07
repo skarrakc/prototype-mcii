@@ -1,5 +1,5 @@
 <template name="goal">
-    
+    {{> notifications}}
     <article>
         <h3>{{goal_name}}</h3>
         <p>
@@ -16,7 +16,8 @@
                 <button class="toggle-menu">Remove From Task List</button>
             {{else}}
                 <button class="toggle-menu">Add to Task List</button>
-            {{/if}}        
+            {{/if}} 
+            <button class="notify">Notify me</button>
     </article> 
 
 </template>

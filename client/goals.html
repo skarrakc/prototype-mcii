@@ -1,7 +1,9 @@
 <template name="goals">
+    <h1 class=page-title>My goal book</h1>
     <section>  
          {{#each goalsOption}}
             {{> goal}}
+         {{else}} <li>Please add <a href="/new-goal">goals</a> to your book</li>
          {{/each}}
       </section>
 </template>
