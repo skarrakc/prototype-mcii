@@ -7,7 +7,7 @@ Meteor.methods({
         });
     },
     
-    notifyMe: function(options) { 
+/*    notifyMe: function(options) { 
 
         perm = notify.permissionLevel();
         if (perm == notify.PERMISSION_DEFAULT) {
@@ -16,4 +16,5 @@ Meteor.methods({
             var notif = new Notification('GoalBook',options);;
         }
     }
+*/
 });
